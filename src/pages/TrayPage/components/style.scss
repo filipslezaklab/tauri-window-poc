@@ -1,0 +1,41 @@
+.fold-section {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 14px;
+  padding: 12px;
+
+  .top {
+    display: flex;
+    flex-flow: row;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .fold {
+    --rows: 0fr;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--rows);
+    transition-property: grid-template-rows;
+    transition-duration: 120ms;
+    transition-timing-function: ease-out;
+
+    &.open {
+      --rows: 1fr;
+    }
+
+    .content {
+      overflow: hidden;
+
+      p {
+        max-width: 100%;
+        overflow: hidden;
+        text-wrap: wrap;
+        word-break: break-all;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

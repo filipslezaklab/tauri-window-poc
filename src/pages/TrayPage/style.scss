@@ -1,0 +1,15 @@
+#tray-page {
+  .folds {
+    display: flex;
+    flex-flow: column;
+    row-gap: 16px;
+  }
+}
+
+main {
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+}
